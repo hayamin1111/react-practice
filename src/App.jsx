@@ -1,10 +1,7 @@
-/* eslint react-hooks/exhaustive-deps: off */
-
 import React, { useEffect, useState } from "react";
 import { ColorfulMessage } from "./components/ColorfulMessage";
 
 const App = () => {
-  console.log("最初");
   //num：変数, setNum：関数 自由に命名できるがsetをつける。0は初期値
   const [num, setNum] = useState(0);
   const [faceShowFlag, setFaceShowFrag] = useState(false);
@@ -27,7 +24,6 @@ const App = () => {
         faceShowFlag && setFaceShowFrag(false);
       }
     }
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [num]);
 
   return (
